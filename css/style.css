@@ -1,0 +1,27 @@
+p{
+  color: white;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.underline:hover{
+text-decoration: underline;
+}
+body {
+  background-color: #24353f;
+}
+input {
+  background-color: transparent !important;
+  color: white !important;
+}
+::placeholder {
+  color: gray !important;
+}
+h1 {
+  color: #17a2b8;
+}
+
+.text{
+  margin-top: 210px !important;
+}
