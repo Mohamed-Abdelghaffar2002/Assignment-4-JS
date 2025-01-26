@@ -62,6 +62,7 @@ if (myData) {
 
 if (logOut) {
   logOut.addEventListener("click", function () {
+    localStorage.removeItem("index");
     window.open("index.html", "_self");
   });
 }
