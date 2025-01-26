@@ -12,7 +12,7 @@ let logOut = document.querySelector("#logOut");
 let myData = document.querySelector("#myData");
 
 let list = [];
-var index;
+// var index;
 
 if (localStorage.getItem("allUsers")) {
   list = JSON.parse(localStorage.getItem("allUsers"));
@@ -45,7 +45,7 @@ if (logIn) {
         loginEmail.value == list[i].email &&
         loginPass.value == list[i].pass
       ) {
-        index = i;
+        localStorage.setItem("index", JSON.stringify(i));
         window.open("home.html", "_self");
         return i;
       }
@@ -56,7 +56,7 @@ if (logIn) {
 }
 
 if (myData) {
-  document.getElementById("myData").innerHTML = `Welcome ${list[index].name} `;
+  document.getElementById("myData").innerHTML = `Welcome ${list[localStorage.getItem("index")].name} `;
 }
 
 
